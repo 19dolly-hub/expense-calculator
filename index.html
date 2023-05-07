@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense app</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* .btn {
+            height: 100px;
+            width: 50px;
+            background-color: gray;
+            color: white;
+        } */
+    </style>
+</head>
+<body>
+    <h2>Total Expense:  <span id="amt"></span> </h2>
+    <input type="text" id="inputExpense">
+    <br>
+    <button id="addBtn">+</button>
+
+    <script>
+
+        // getting the amount element
+        let amt = document.querySelector('#amt')
+
+        // starting from zero
+        let totalExpense = 0
+        // console.log(totalExpense)
+
+        // setting the amount element to totalExpense
+        amt.textContent = totalExpense
+
+
+        // making desired function(oncick add inputExpense to totalExpense)
+        function addExpenseToTotal() {
+           // reading value from input
+           const input = document.querySelector('#inputExpense')
+           const inputText = input.value
+        //    console.log( {inputText} )
+
+           //convert it to number
+           const expense = parseInt(inputText, 10) //why 10
+        //    console.log( {expense} )
+           
+           //add that value to totalExpense
+           totalExpense = totalExpense + expense
+        //    console.log( {totalExpense} )
+
+            // setting the amount element to totalExpense
+            amt.textContent = totalExpense
+
+
+        // inreament
+        // totalExpense = totalExpense + 1
+        // console.log(totalExpense)
+        }
+        // calling without click
+        // addExpenseToTotal()
+
+        
+        // getting button element
+        let btn = document.querySelector('#addBtn')
+        // console.log(btn)
+
+        // listening click event
+        btn.addEventListener('click', addExpenseToTotal, false)
+        // i don't know yet why it is false
+
+    </script>
+</body>
+</html>

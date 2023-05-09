@@ -6,16 +6,32 @@
 
         // starting from zero
         let totalExpense = 0;
+        // listing the expenses
+        const allExpenses = [];
 
         // making desired function(oncick add inputExpense to totalExpense)        
+        
         function addExpenseToTotal() {
+            // making object for expenses
+            const expenseItems = {};
+
            //    reading value from input 
            const descText = inputDesc.value;
            const amtText = inputEl.value;
-        //    console.log( {amtText, descText});
 
            //convert it to number
            const expense = parseInt(amtText, 10); //why 10
+
+           //putting the info in the expenseItems object
+           expenseItems.desc = descText;
+           expenseItems.amt = amtText;
+           console.log( expenseItems);      
+           
+           // pushing the data in the allExpenses array
+           allExpenses.push(expenseItems);
+
+           console.clear(); // To get only final table
+           console.table(allExpenses); // To see in tabular form
            
            //add that value to totalExpense
            totalExpense = totalExpense + expense;    

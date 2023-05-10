@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design 2</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .nav{
+            background-color: gray;
+            color: white;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid darkgray;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <h1> Calculate your Expense</h1>
+    </nav>
+    <div class="container">
+        <div class="field1">
+        <span class="badge">@</span>
+        <input type="text" placeholder="Expense Description">
+    </div>
+    <div class="field2">
+        <input type="text" placeholder="Amount Spent">
+        <span class="badge">₹</span>
+    </div>
+    <button class="add-btn">Add</button>
+    </div>
+    <div class="container">
+        <ul>
+            <li class="list-items">Item 1</li>
+            <li class="list-items">Item 2</li>
+        </ul>
+    </div>
+</body>
+</html>

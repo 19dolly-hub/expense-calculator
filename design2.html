@@ -23,6 +23,9 @@
             margin: 5px;
             padding: 5px;
         }
+        .style-none{
+            list-style: none;
+        }
     </style>
 </head>
 <body>
@@ -30,21 +33,22 @@
         <h1> Calculate your Expense</h1>
     </nav>
     <div class="container">
+        <h2>Total Expenses:  <span id="amt"></span> </h2>
         <div class="field1">
         <span class="badge">@</span>
-        <input type="text" placeholder="Expense Description">
+        <input type="text" placeholder="Expense Description" id="inputDesc">
     </div>
     <div class="field2">
-        <input type="text" placeholder="Amount Spent">
+        <input type="text" placeholder="Amount Spent" id="inputExpense">
         <span class="badge">₹</span>
     </div>
-    <button class="add-btn">Add</button>
+    <button class="add-btn" id="addBtn">Add</button>
     </div>
     <div class="container">
-        <ul>
-            <li class="list-items">Item 1</li>
-            <li class="list-items">Item 2</li>
+        <ul class="expenseTable style-none">
+            <li class="list-items"></li>
         </ul>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

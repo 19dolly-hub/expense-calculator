@@ -40,14 +40,11 @@
             const allExpensesHTML = allExpenses.map(expenseItems => { 
                 return ` <div> ${expenseItems.desc} : ${expenseItems.amt} </div> `;
             });
-            console.log(allExpensesHTML);
-
+            
             // joining allExpenseHTML [making array as string]
-            var joinAllExpensesHTML = allExpensesHTML.join();
-            console.log(joinAllExpensesHTML);
-            var joinAllExpensesHTML = allExpensesHTML.join('');
-            console.log(joinAllExpensesHTML);
-
+            let joinAllExpensesHTML = allExpensesHTML.join('');
+            
+            // showing on the app
             tableEl.innerHTML = joinAllExpensesHTML;
         }
 

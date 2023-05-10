@@ -36,18 +36,19 @@
             // setting the amount element to totalExpense
             amtEl.textContent = totalExpense;
             
-            // making table for only two list items
-            const data1 = allExpenses[0];
-            const data2 = allExpenses[1];
+            // calling map on the array
+            const allExpensesHTML = allExpenses.map(expenseItems => { 
+                return ` <div> ${expenseItems.desc} : ${expenseItems.amt} </div> `;
+            });
+            console.log(allExpensesHTML);
 
-            const data1Text = `${data1.desc} : ${data1.amt}`;
-            const data2Text = `${data2.desc} : ${data2.amt}`;
-            
-            const theTable = `
-            <div>${data1Text}</div>
-            <div>${data2Text}</div>
-            `;
-            tableEl.innerHTML = theTable;
+            // joining allExpenseHTML [making array as string]
+            var joinAllExpensesHTML = allExpensesHTML.join();
+            console.log(joinAllExpensesHTML);
+            var joinAllExpensesHTML = allExpensesHTML.join('');
+            console.log(joinAllExpensesHTML);
+
+            tableEl.innerHTML = joinAllExpensesHTML;
         }
 
         // listening click event

@@ -37,14 +37,7 @@
             // setting the amount element to totalExpense
             amtEl.textContent = totalExpense;
             
-            // calling map on the array
-            const allExpensesHTML = allExpenses.map(expenseItems => addHTML(expenseItems));
-
-            // joining allExpenseHTML [making array as string]
-            let joinAllExpensesHTML = allExpensesHTML.join('');
-            
-            // showing on the app
-            tableEl.innerHTML = joinAllExpensesHTML;
+            render(allExpenses);
         };
 
         // listening click event
@@ -58,12 +51,15 @@
                     newArr.push(allExpenses[i]);
                 }
             }
-            // copying from addtototal function
-            const allExpensesHTML = newArr.map(expenseItems => addHTML(expenseItems));
+            render(newArr);
+            };
+
+        // the render function
+        function render(theArr){
+            const allExpensesHTML = theArr.map(expenseItems => addHTML(expenseItems));
             let joinAllExpensesHTML = allExpensesHTML.join('');
             tableEl.innerHTML = joinAllExpensesHTML;            
-            // console.log(newArr);
-            };
+        };
             
         // separating function for adding HTML 
         function addHTML({desc, amt, moment}){

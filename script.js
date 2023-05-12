@@ -37,20 +37,24 @@
             amtEl.textContent = totalExpense;
             
             // calling map on the array
-            const allExpensesHTML = allExpenses.map(expenseItems => { 
-                return `                
-                    <li class="list-group-item">
-                    ${expenseItems.desc} : ${expenseItems.amt} 
-                    </li>
-                `;
-            });
+            const allExpensesHTML = allExpenses.map(expenseItems => addHTML(expenseItems));
 
             // joining allExpenseHTML [making array as string]
             let joinAllExpensesHTML = allExpensesHTML.join('');
             
             // showing on the app
             tableEl.innerHTML = joinAllExpensesHTML;
-        }
+        };
 
         // listening click event
         btnEl.addEventListener('click', addExpenseToTotal, false); // why it is false
+
+        // separating function for adding HTML 
+        function addHTML({desc, amt}){
+            return `                
+            <li class="list-group-item">
+            ${desc} : ${amt} 
+            </li>
+        `;
+        };
+        

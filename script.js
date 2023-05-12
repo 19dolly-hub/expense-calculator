@@ -26,6 +26,7 @@
            //putting the info in the expenseItems object
            expenseItems.desc = descText;
            expenseItems.amt = amtText;
+           expenseItems.moment = new Date();
            
            // pushing the data in the allExpenses array
            allExpenses.push(expenseItems);
@@ -50,10 +51,10 @@
         btnEl.addEventListener('click', addExpenseToTotal, false); // why it is false
 
         // separating function for adding HTML 
-        function addHTML({desc, amt}){
+        function addHTML({desc, amt, moment}){
             return `                
             <li class="list-group-item">
-            <small id="date"> May 12, 2023</small>
+            <small id="date"> ${moment.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'})} </small> <!-- don't use "" instead of {} -->
             <br>
             ${desc} : ${amt} 
             </li>

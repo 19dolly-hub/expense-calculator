@@ -52,12 +52,10 @@
 
         // funtion for deleting the list items
         function removeFn(dateValue) {
-            // console.log('remove btn found!', dateValue);
             for (let i = 0; i < allExpenses.length; i++) {
                 if (allExpenses[i].moment.valueOf() === dateValue) {
-                    console.log('item found!');
+                    console.log(allExpenses[i].moment.valueOf());
                 }
-                console.log(allExpenses[i].moment.valueOf());
             }
             };
             

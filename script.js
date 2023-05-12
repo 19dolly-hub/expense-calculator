@@ -3,7 +3,7 @@
         const spentEl = document.querySelector('#inputDesc');  
         const inputEl = document.querySelector('#inputExpense');
         let btnEl = document.querySelector('#addBtn');
-        let tableEl = document.querySelector('.expenseTable');
+        let tableEl = document.querySelector('#expenseTable');
 
         // starting from zero
         let totalExpense = 0;
@@ -39,7 +39,7 @@
             // calling map on the array
             const allExpensesHTML = allExpenses.map(expenseItems => { 
                 return `                
-                <div class="container">
+                <div class="container" id="expenseTable">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
                     ${expenseItems.desc} : ${expenseItems.amt} 

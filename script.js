@@ -62,6 +62,6 @@
         };
 
         // separating function for adding Date to HTML
-        function addDate(moment){
-            return moment.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
-        };
+        function addDate(theDate){
+            return theDate.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+        }; // call by reference- pass by reference

@@ -54,10 +54,14 @@
         function addHTML({desc, amt, moment}){
             return `                
             <li class="list-group-item">
-            <small id="date"> ${moment.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'})} </small> <!-- don't use "" instead of {} -->
+            <small id="date"> ${addDate(moment)} </small>
             <br>
             ${desc} : ${amt} 
             </li>
         `;
         };
-        
+
+        // separating function for adding Date to HTML
+        function addDate(moment){
+            return moment.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+        };

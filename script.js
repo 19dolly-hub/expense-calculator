@@ -53,6 +53,8 @@
         function addHTML({desc, amt}){
             return `                
             <li class="list-group-item">
+            <small id="date"> May 12, 2023</small>
+            <br>
             ${desc} : ${amt} 
             </li>
         `;

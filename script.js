@@ -45,11 +45,9 @@
 
         // funtion for deleting the list items
         function removeFn(dateValue) {
-            const newArr = allExpenses.filter(expenseItems => {
-                if(expenseItems.moment.valueOf() !== dateValue){
-                    return expenseItems;
-                }
-            });
+            const newArr = allExpenses.filter(expenseItems =>
+                expenseItems.moment.valueOf() !== dateValue                
+            );
             render(newArr);
             };
 

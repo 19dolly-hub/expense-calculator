@@ -38,10 +38,15 @@
             
             // calling map on the array
             const allExpensesHTML = allExpenses.map(expenseItems => { 
-                return ` 
-                <li>
-                ${expenseItems.desc} : ${expenseItems.amt} 
-                </li>`;
+                return `                
+                <div class="container">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                    ${expenseItems.desc} : ${expenseItems.amt} 
+                    </li>
+                  </ul>
+                </div>
+                `;
             });
 
             // joining allExpenseHTML [making array as string]

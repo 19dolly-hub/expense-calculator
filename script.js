@@ -39,7 +39,7 @@
             // calling map on the array
             const allExpensesHTML = allExpenses.map(expenseItems => { 
                 return ` 
-                <li class="list-items">
+                <li>
                 ${expenseItems.desc} : ${expenseItems.amt} 
                 </li>`;
             });

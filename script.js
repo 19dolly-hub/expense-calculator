@@ -56,7 +56,10 @@
             <li class="list-group-item">
             <small id="date"> ${addDate(moment)} </small>
             <br>
+            <div class="list-item">
             ${desc} : ${amt} 
+            <button type="button" class="btn btn-outline-danger" id="removeBtn">Remove</button>
+            </div>
             </li>
         `;
         };

@@ -29,6 +29,10 @@
         #date{
             color: cadetblue;
         }
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
 </head>
 <body>
@@ -45,7 +49,7 @@
         <input type="text" placeholder="Amount Spent" id="inputExpense">
         <span class="badge">₹</span>
     </div>
-    <button class="add-btn" id="addBtn">Add</button>
+    <button id="addBtn">Add</button>
     </div>
     <div class="container">
         <ul class="style-none" id="expenseTable">

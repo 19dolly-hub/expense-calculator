@@ -52,11 +52,17 @@
 
         // funtion for deleting the list items
         function removeFn(dateValue) {
+            const newArr = [];
             for (let i = 0; i < allExpenses.length; i++) {
-                if (allExpenses[i].moment.valueOf() === dateValue) {
-                    console.log(allExpenses[i].moment.valueOf());
+                if (allExpenses[i].moment.valueOf() !== dateValue) {
+                    newArr.push(allExpenses[i]);
                 }
             }
+            // copying from addtototal function
+            const allExpensesHTML = newArr.map(expenseItems => addHTML(expenseItems));
+            let joinAllExpensesHTML = allExpensesHTML.join('');
+            tableEl.innerHTML = joinAllExpensesHTML;            
+            // console.log(newArr);
             };
             
         // separating function for adding HTML 

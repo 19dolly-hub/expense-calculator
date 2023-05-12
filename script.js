@@ -50,6 +50,17 @@
         // listening click event
         btnEl.addEventListener('click', addExpenseToTotal, false); // why it is false
 
+        // funtion for deleting the list items
+        function removeFn(dateValue) {
+            // console.log('remove btn found!', dateValue);
+            for (let i = 0; i < allExpenses.length; i++) {
+                if (allExpenses[i].moment.valueOf() === dateValue) {
+                    console.log('item found!');
+                }
+                console.log(allExpenses[i].moment.valueOf());
+            }
+            };
+            
         // separating function for adding HTML 
         function addHTML({desc, amt, moment}){
             return `                
@@ -58,7 +69,7 @@
             <br>
             <div class="list-item">
             ${desc} : ${amt} 
-            <button type="button" class="btn btn-outline-danger" id="removeBtn">Remove</button>
+            <button type="button" class="btn btn-outline-danger" id="removeBtn" onclick="removeFn(${moment.valueOf()})">Remove</button>
             </div>
             </li>
         `;

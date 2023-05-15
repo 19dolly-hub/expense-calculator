@@ -17,7 +17,7 @@
             const expenseItems = {};
 
            //    reading value from input 
-           const descText = inputDesc.value;
+           const descText = spentEl.value;
            const amtText = inputEl.value;
 
            //convert it to number

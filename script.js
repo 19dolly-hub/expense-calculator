@@ -1,7 +1,7 @@
         // getting all elements
-        let amtEl = document.querySelector('#amt');
-        const spentEl = document.querySelector('#inputDesc');  
-        const inputEl = document.querySelector('#inputExpense');
+        let totalAmtEl = document.querySelector('#totalAmt');
+        const descEl = document.querySelector('#inputDesc');  
+        const amtEl = document.querySelector('#inputAmt');
         let btnEl = document.querySelector('#addBtn');
         let tableEl = document.querySelector('#expenseTable');
 
@@ -17,13 +17,13 @@
             const expenseItems = {};
 
            //    reading value from input 
-           const descText = spentEl.value;
-           const amtText = inputEl.value;
+           const descText = descEl.value;
+           const amtText = amtEl.value;
 
            //convert it to number
            const expense = parseInt(amtText, 10); //why 10
 
-           //putting the info in the expenseItems object
+           //putting the info in the expenseItems object //defining properties
            expenseItems.desc = descText;
            expenseItems.amt = amtText;
            expenseItems.moment = new Date();
@@ -35,8 +35,9 @@
            totalExpense = totalExpense + expense;    
 
             // setting the amount element to totalExpense
-            amtEl.textContent = totalExpense;
+            totalAmtEl.textContent = totalExpense;
             
+            // generating table using html inside js function //calling the function
             render(allExpenses);
         };
 
